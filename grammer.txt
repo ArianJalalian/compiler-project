@@ -1,0 +1,11 @@
+Goal -> (Statement;)*
+Statement -> Define | Assign
+Define -> type int Id (, Id)*
+Assign -> Id = Expr
+Expr -> Term ((+|-) Term)*
+Term -> Factor ((*|/) Factor)*
+Factor -> Id | Number | (Expr)
+Id -> (^[0-9][a-zA-Z0-9])+
+Number -> [0-9]+ 
+
+
